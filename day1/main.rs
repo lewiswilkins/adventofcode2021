@@ -5,12 +5,12 @@ use std::path::Path;
 use std::vec::Vec;
 
 fn main() {
-    let data = load_data_to_vector("input.txt");
-    part_1(data);
-    part_2(data);
+    part_1();
+    part_2();
 }
 
-fn part_1(data: Vec<i32>) {
+fn part_1() {
+    let data = load_data_to_vector("input.txt");
     let data_len = data.len();
     let mut increases = 0;
 
@@ -28,7 +28,8 @@ fn part_1(data: Vec<i32>) {
     println!("Number of increasing measurements {}", increases);
 }
 
-fn part_2(data: Vec<i32>) {
+fn part_2() {
+    let data = load_data_to_vector("input.txt");
     let data_len = data.len();
     let mut window_increases = 0;
 
